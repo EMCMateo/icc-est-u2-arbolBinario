@@ -39,4 +39,25 @@ public class ArbolBinario {
         imprimir(nodo.getDerecho());
     }
 }
+
+public boolean buscar(int valor) {
+    return buscarRec(root, valor);
+}
+
+private boolean buscarRec(Nodo nodo, int valor) {
+    if (nodo == null) {
+        System.out.println("El valor " + valor + " no se encuentra en el árbol.");
+        return false;
+    }
+    if (nodo.getValor() == valor){
+        System.out.println("El valor está en el arbol.");
+        return true;
+    }
+    if (valor < nodo.getValor()) {
+        return buscarRec(nodo.getIzquierdo(), valor);
+    } else {
+        return buscarRec(nodo.getDerecho(), valor);
+    }   
+}
+
 }

@@ -12,5 +12,6 @@ public class App {
         ab.insert(19);
 
         ab.imprimirArbol();
+        ab.buscar(23);
     }
 }
